@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F17E1BF-0A65-4F6B-A1D0-FA04CED90B8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mhrs_randevu_otomasyonu</RootNamespace>
+    <AssemblyName>mhrs-randevu-otomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin-doktor-ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-doktor-ekle.Designer.cs">
+      <DependentUpon>admin-doktor-ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin-doktor-isleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-doktor-isleri.Designer.cs">
+      <DependentUpon>admin-doktor-isleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin-duyuru-ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-duyuru-ekle.Designer.cs">
+      <DependentUpon>admin-duyuru-ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin-duyuru-islemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-duyuru-islemleri.Designer.cs">
+      <DependentUpon>admin-duyuru-islemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin-hasta-kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-hasta-kayit.Designer.cs">
+      <DependentUpon>admin-hasta-kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin-panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-panel.Designer.cs">
+      <DependentUpon>admin-panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calisma-saatleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calisma-saatleri.Designer.cs">
+      <DependentUpon>calisma-saatleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
+    <Compile Include="admin-giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin-giris.Designer.cs">
+      <DependentUpon>admin-giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doktor-bilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doktor-bilgileri.Designer.cs">
+      <DependentUpon>doktor-bilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doktor-hastalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doktor-hastalari.Designer.cs">
+      <DependentUpon>doktor-hastalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doktor-paneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doktor-paneli.Designer.cs">
+      <DependentUpon>doktor-paneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dr-izin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dr-izin.Designer.cs">
+      <DependentUpon>dr-izin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hakkimizda.Designer.cs">
+      <DependentUpon>hakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasta-randevual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasta-randevual.Designer.cs">
+      <DependentUpon>hasta-randevual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasta-randevularım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasta-randevularım.Designer.cs">
+      <DependentUpon>hasta-randevularım.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hastane_isleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastane_isleri.Designer.cs">
+      <DependentUpon>hastane_isleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasta_islemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasta_islemleri.Designer.cs">
+      <DependentUpon>hasta_islemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="poliklinikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="poliklinikler.Designer.cs">
+      <DependentUpon>poliklinikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sifrele.cs" />
+    <Compile Include="sifremi_unuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sifremi_unuttum.Designer.cs">
+      <DependentUpon>sifremi_unuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uye-doktorlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uye-doktorlar.Designer.cs">
+      <DependentUpon>uye-doktorlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uye-duyurular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uye-duyurular.Designer.cs">
+      <DependentUpon>uye-duyurular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uye-hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uye-hakkimizda.Designer.cs">
+      <DependentUpon>uye-hakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uye-ol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uye-ol.Designer.cs">
+      <DependentUpon>uye-ol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uye-paneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uye-paneli.Designer.cs">
+      <DependentUpon>uye-paneli.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin-doktor-ekle.resx">
+      <DependentUpon>admin-doktor-ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-doktor-isleri.resx">
+      <DependentUpon>admin-doktor-isleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-duyuru-ekle.resx">
+      <DependentUpon>admin-duyuru-ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-duyuru-islemleri.resx">
+      <DependentUpon>admin-duyuru-islemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-hasta-kayit.resx">
+      <DependentUpon>admin-hasta-kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-panel.resx">
+      <DependentUpon>admin-panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin-giris.resx">
+      <DependentUpon>admin-giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calisma-saatleri.resx">
+      <DependentUpon>calisma-saatleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doktor-bilgileri.resx">
+      <DependentUpon>doktor-bilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doktor-hastalari.resx">
+      <DependentUpon>doktor-hastalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doktor-paneli.resx">
+      <DependentUpon>doktor-paneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dr-izin.resx">
+      <DependentUpon>dr-izin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hakkimizda.resx">
+      <DependentUpon>hakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasta-randevual.resx">
+      <DependentUpon>hasta-randevual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasta-randevularım.resx">
+      <DependentUpon>hasta-randevularım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastane_isleri.resx">
+      <DependentUpon>hastane_isleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasta_islemleri.resx">
+      <DependentUpon>hasta_islemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="poliklinikler.resx">
+      <DependentUpon>poliklinikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sifremi_unuttum.resx">
+      <DependentUpon>sifremi_unuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uye-doktorlar.resx">
+      <DependentUpon>uye-doktorlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uye-duyurular.resx">
+      <DependentUpon>uye-duyurular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uye-hakkimizda.resx">
+      <DependentUpon>uye-hakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uye-ol.resx">
+      <DependentUpon>uye-ol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uye-paneli.resx">
+      <DependentUpon>uye-paneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
